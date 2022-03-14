@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Autor;
 use App\Models\Noticia;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,7 +33,9 @@ class NoticiaController extends Controller
      */
     public function create()
     {
-        //
+        $autores = Autor::all();
+        $categorias = Categoria::all();
+        return view('noticias.crear', ['autores' => $autores, 'categorias' => $categorias]);
     }
 
     /**
@@ -42,7 +46,9 @@ class NoticiaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $noticia = new Noticia($request -> all());
+        $noticia -> save();
+        return redirect() -> action(NoticiaController::class, 'index');
     }
 
     /**

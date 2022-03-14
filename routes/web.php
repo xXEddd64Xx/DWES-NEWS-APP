@@ -28,3 +28,21 @@ Route::get('/categorias', [CategoriaController::class, 'index'])
 
 Route::get('/noticias', [NoticiaController::class, 'index'])
 -> name('noticias.index');
+
+Route::get('/autores/crear', [AutorController::class, 'create'])
+-> name('autores.create');
+
+Route::post('/autores/crear', [AutorController::class, 'store'])
+-> name('autores.store');
+
+Route::get('/categorias/crear', [CategoriaController::class, 'create'])
+-> name('categorias.create');
+
+Route::post('/categorias/crear', [CategoriaController::class, 'store'])
+-> name('categorias.store');
+
+Route::get('/noticias/crear', [NoticiaController::class, 'create'])
+-> name('noticias.create');
+
+Route::post('/noticias/crear', [NoticiaController::class, 'store'])
+-> name('noticias.store');

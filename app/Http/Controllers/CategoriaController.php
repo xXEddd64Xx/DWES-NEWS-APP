@@ -25,7 +25,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('categorias.crear');
     }
 
     /**
@@ -36,7 +36,9 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $categoria = new Categoria($request -> all());
+        $categoria -> save();
+        return redirect() -> action([CategoriaController::class, 'index']);
     }
 
     /**

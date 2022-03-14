@@ -20,6 +20,7 @@
         </style>
     </head>
     <body>
+        <a href="{{ route('noticias.create') }}">Nueva Noticia</a>
         <h2>Listado de Categorias</h2>
         <table>
             <tr>

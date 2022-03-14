@@ -20,6 +20,7 @@
     </style>
 </head>
 <body>
+    <a href="{{ route('categorias.create') }}">Nueva Categoria</a>
     <h2>Listado de Categorias</h2>
     <table>
         <tr>

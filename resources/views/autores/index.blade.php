@@ -20,6 +20,7 @@
     </style>
 </head>
 <body>
+    <a href="{{ route('autores.create') }}">Nuevo Autor</a>
     <h2>Listado de Autores</h2>
     <table>
         <tr>
